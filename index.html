@@ -17,49 +17,11 @@
             
             // 文字動畫效果
             $(".fade-in-text").css({ opacity: 1, transform: "scale(1)" });
-        });
-    </script>
-</head>
-<body>
-    <video autoplay muted loop id="background-video">
-        <source src="music_video.mp4" type="video/mp4">
-        您的瀏覽器不支援影片播放。
-    </video>
+        }
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <!-- 頁首 -->
-    <header class="fade-in-text">
-        <h1>葉泰豐的歌單</h1>
-    </header>
 
-    <!-- 主內容區塊 -->
-    <main>
-        <section id="section1" class="content-section fade-in-text">
-            <nav class="navigation">
-                <ul>
-                    <li><a href="next1.html">運轉人生歌詞</a></li>
-                </ul>
-            </nav>
-        </section>
-
-        <section id="section2" class="content-section fade-in-text">
-            <nav class="navigation">
-                <ul>
-                    <li><a href="next2.html">聽見下雨的聲音歌詞</a></li>
-                </ul>
-            </nav>
-        </section>
-    </main>
-
-    <!-- 頁尾 -->
-    <footer>
-        <p>&copy; 2024 NKNU 我的小小網站</p>
-    </footer>
-
-<!-- jQuery -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-<!-- 自訂的動畫效果 -->
-<script>
     $(function() {
         // 淡入效果
         $("main").hide().fadeIn(2000);
@@ -91,6 +53,45 @@
             }
         });
     });
-</script>
+
+    </script>
+</head>
+<body>
+
+    <!-- 頁首 -->
+    <header class="fade-in-text">
+        <h1>葉泰豐的歌單</h1>
+    </header>
+
+    <!-- 主內容區塊 -->
+    <main>
+        <section id="section1" class="content-section fade-in-text">
+            <nav class="navigation">
+                <ul>
+                    <li><a href="next1.html">運轉人生歌詞</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <section id="section2" class="content-section fade-in-text">
+            <nav class="navigation">
+                <ul>
+                    <li><a href="next2.html">聽見下雨的聲音歌詞</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <video autoplay muted loop id="background-video">
+            <source src="music_video.mp4" type="video/mp4">
+            您的瀏覽器不支援影片播放。
+        </video>
+    </main>
+
+    <!-- 頁尾 -->
+    <footer>
+        <p>&copy; 2024 NKNU 我的小小網站</p>
+    </footer>
+
+
 </body>
 </html>

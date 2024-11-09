@@ -1,0 +1,112 @@
+@charset "UTF-8"; /* UTF-8編碼，使中文不會產生亂碼*/
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css); /* google雲端字體 思源黑體*/
+/* CSS Document */
+/* body */
+body{
+	font-family:"Noto Sans TC", sans-serif;  /* google雲端字體 思源黑體*/
+	background: #fff;   /* 背景色*/
+	margin: 0;          /* 外部距離設為0*/
+	text-align: center; /*文字居中對齊*/
+	-webkit-text-size-adjust: 100%;         /*文字大小會達到易讀的大小，但是不會修改佈局*/
+}
+
+
+/* 區塊設定 */
+header{
+	background:#104951;  /* 背景色*/
+	padding-top: 10px;   /* 內距-上方，上方內部距離為10px*/
+}
+main{
+	background-image: url(raining2.jpg);  /* 背景色*/
+	padding: 30px;      /* 內距，內部距離設為30px*/
+	font-size: 16px;    /* 內文的字體大小設為16px*/
+	line-height: 2em;   /* 行間設為2個字高*/
+	color:#ffffff;      /* 文字顏色設定*/
+}
+footer{
+	background:#134514; /* 背景色*/
+	padding: 10px;      /* 內距，內部距離設為10px*/
+	font-size: 14px;    /* 內文的字體大小設為14px*/
+	color: #E4EEF7;     /* 文字顏色設定*/
+}
+/* 網站標題 */
+h1 {
+	font-size: 28px;    /* 內文的字體大小設為28px*/
+	color: #E4EEF7;     /* 文字顏色設定*/
+	font-weight:700;    /* 文字粗細設定，100,300,400,500,700,700*/	
+}
+/* 標題 */
+h2 {
+	font-size: 16px;    /* 內文的字體大小設為16px*/
+	color: #E4EEF7;     /* 文字顏色設定*/
+	font-weight: 300;   /* 文字粗細設定*/
+}
+h3{
+	font-size: 14px;    /* 內文的字體大小設為14px*/
+	color: #E4EEF7;     /* 文字顏色設定*/
+	font-weight: 100;   /* 文字粗細設定*/
+}
+/* 超連結 */
+a{
+	color: #EF5095;        /* 超連結屬性的文字顏色設定*/
+}
+a:hover{
+	color: #048FC1;        /* 超連結『滑鼠滑過』文字顏色設定*/
+	text-decoration: none; /* 超連結『滑鼠滑過』文字無底線裝飾效果*/
+}
+/* 導覽列 */
+.navigation ul {
+    background:#929292; /* 導覽列背景色*/
+    margin: 0;          /* 外部距離設為0*/
+    padding: 05px;      /* 內距，內部距離設為10px*/
+    text-align: center; /* 文字居中對齊*/
+}
+.navigation ul li {
+    list-style-type: none;  /* 取消項目清單符號*/
+    display: inline;        /* 使元素於同一行呈現（文字或圖片不換行）*/
+    margin: 0 8px;          /* 外部距離設定，上下0px,左右8px*/
+}
+.navigation ul li a {
+    color: #ffffff;         /* 導覽列超連結文字顏色設定*/
+    text-decoration: none;  /* 導覽列超連結文字無底線裝飾效果*/
+}
+.navigation ul li a:hover {
+    color: #b7e862;             /* 導覽列超連結『滑鼠滑過』文字顏色設定*/
+    text-decoration: underline; /* 導覽列超連結『滑鼠滑過』文字有底線裝飾效果*/
+}
+#tabs{
+	width: 50%;       /* tabs 寬度設為50% */
+	margin:0px auto;  /* tabs 置中對齊 */
+}
+
+.ui-widget-content {
+    border: 1px solid #aaaaaa;         /* tabs 邊框設為寬1px灰色的實線 ，可自行修改 */
+    background: rgba(172,217,224,0.6); /* tabs 底色 設定為淺藍色，不透明度60%*/
+    color: #222222;                    /* tabs 文字的顏色*/
+}
+
+/* 父容器樣式 */
+.image {
+    text-align: center; /* 將子元素圖片水平置中 */
+}
+
+/* 圖片樣式 */
+.image img {
+    max-width: 50%; /* 設定圖片寬度為容器寬度的一半 */
+    height: auto; /* 保持圖片比例 */
+    margin: 20px 0; /* 圖片上下留空間 */
+    display: inline-block; /* 使圖片變為內聯塊元素 */
+    border-radius: 10px; /* 圓角效果 */
+}
+/* 去除導航欄的圓點 */
+.navigation ul {
+    list-style-type: none; /* 去除默認的圓點 */
+    padding: 0; /* 去除內邊距 */
+    margin: 0; /* 去除外邊距 */
+}
+
+.navigation li {
+    display: inline-block; /* 讓列表項目顯示為行內塊元素 */
+    margin-right: 20px; /* 設定項目間距 */
+
+}

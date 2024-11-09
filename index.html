@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="運轉人生歌詞">
+    <title>運轉人生/Kui</title>
+    
+    <!-- CSS -->
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+
+    <!-- jQuery 和 jQuery UI -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+    
+    <style>
+        /* 淡入及縮放效果 */
+        .fade-in-text {
+            opacity: 0;
+            transform: scale(0.8);
+            transition: opacity 2s ease, transform 2s ease;
+        }
+        
+        /* 打字機風格逐字效果 */
+        .typing-text {
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 3px solid;
+            animation: typing 6s steps(20), blink-caret 0.5s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: black; }
+        }
+    </style>
+
+    <script>
+      $(function() {
+        // 淡入效果
+        $("main").hide().fadeIn(2000);
+
+        // Tabs 效果
+        $("#tabs").tabs();
+
+        // 文字動畫效果
+        $(".fade-in-text").css({ opacity: 1, transform: "scale(1)" });
+      });
+    </script>
+</head>
+<body>
+    <header>
+        <h1 class="fade-in-text">運轉人生 Kui</h1>  
+        <h3 class="fade-in-text">影集 華麗計程車行 插曲</h3>
+        <h2 class="fade-in-text">作詞：施立Shih Li<br>作曲：楊子樸Venk<br>編曲：JerryC</h2>
+    
+        <nav>
+            <ul class="navigation fade-in-text">
+                <li><a href="Home_website.html">回首頁</a></li>
+            </ul>
+        </nav>
+  
+    </header>
+    
+    
+    <main>
+        <section class="lyrics fade-in-text">
+            <main>
+            麥來問我 我嘛毋知影<br>
+            命運創空 欲按怎辦<br>
+            少年吔 你若有理想<br>
+            來去著麥拖沙 油門踏落<br>
+            引擎聲 聲聲 再會啦<br>
+            <p></p>
+            惦在 這個世間 海海 無人會知<br>
+            哪會 天大地大 找無咱未來<br>
+            管待 社會無情 佳哉 有你有我<br>
+            運轉人生 沿路親像 一首歌<br>
+            <p></p>
+            三八毋才 講甲袂伸車<br>
+            朋友兄弟 咧計較啥<br>
+            你若是 傷心無地講<br>
+            我陪你唸情歌 歌若唱煞<br>
+            過去著 放乎 切切啦<br>
+            <p></p>
+            惦在 這個世間 海海 無人會知<br>
+            哪會 天大地大 找無咱未來<br>
+            管待 社會無情 佳哉 有你有我<br>
+            運轉人生 沿路親像 一首歌<br>
+            <p></p>
+            人講人生境遇好壞 無人按算會來<br>
+            咱的心頭來掠乎定 鬥陣袂孤單<br>
+            <p></p>
+            惦在 這個世間 海海 無人會知<br>
+            哪會 天大地大 找無咱未來<br>
+            管待 社會無情 佳哉 有你有我<br>
+            運轉人生 沿路親像 一首歌<br>
+        </section>
+
+        <section id="tabs" class="fade-in-text">
+            <ul>
+                <li><a href="#tabs-1">歌手的心態</a></li>
+                <li><a href="#tabs-2">作詞者的想法</a></li>
+                <li><a href="#tabs-3">作曲的理念</a></li>
+            </ul>
+            <div id="tabs-1">
+                <p>邱軍的聲音和演唱風格帶著濃厚的生命力和情感，他在這首歌中既表現了面對挫折的無奈，又傳遞了不屈不撓、堅持夢想的精神。</p>
+            </div>
+            <div id="tabs-2">
+                <p>施立在創作過程中，注入了一種樸實無華的真實感，他希望讓人們明白每個人都可能經歷挫折與迷茫，但這並不代表放棄。</p>
+            </div>
+            <div id="tabs-3">
+                <p>Venk的編曲風格以真誠為基礎，他將情感融入音符之間，塑造出既深情又激勵人心的音樂氛圍，使《唱運轉人生》成為一首陪伴人們面對人生起伏的歌曲。</p>
+            </div>
+          </section>
+          <section class="image fade-in-text">
+            <img src="./img/road.jpg" alt="Road Image">
+          
+        <section class="media fade-in-text">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/x-OinY-8bxc?si=DIdcsdeM0kD_EYxi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+
+      </section>
+      <section class="listen-link fade-in-text"></section>
+        <a href="https://www.youtube.com/watch?v=x-OinY-8bxc" target="_blank">聽歌去</a>  
+    </section>
+      
+      
+    </main>
+
+    <footer class="fade-in-text">
+        <p class="copyright">
+            <small>&copy; 2024 homework，本網站為作業之用，如有侵權敬請告知</small>
+        </p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8"> 
+    <title>聽見下雨的聲音/魏如昀</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="聽見下雨的聲音歌詞">
+    <link href="style02.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+
+    <!-- jQuery 和 jQuery UI -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+    
+    <style>
+        /* 淡入及縮放效果 */
+        .fade-in-text {
+            opacity: 0;
+            transform: scale(0.8);
+            transition: opacity 2s ease, transform 2s ease;
+        }
+        
+        /* 打字機風格逐字效果 */
+        .typing-text {
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 3px solid;
+            animation: typing 6s steps(20), blink-caret 0.5s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: black; }
+        }
+
+        /* 圖片樣式 */
+        .image img {
+            width: 50%; /* 設定圖片寬度為50% */
+            height: auto; /* 高度自動，保持比例 */
+            display: block;
+            margin: 0 auto; /* 置中圖片 */
+        }
+
+        /* 去除導航欄的圓點 */
+        .navigation ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+    </style>
+
+    <script>
+      $(function() {
+        // 淡入效果
+        $("main").hide().fadeIn(2000);
+
+        // Tabs 效果
+        $("#tabs").tabs();
+
+        // 文字動畫效果
+        $(".fade-in-text").css({ opacity: 1, transform: "scale(1)" });
+      });
+    </script>
+</head>
+<body>
+    <header>
+        <h1 class="fade-in-text">聽見下雨的聲音 魏如昀 </h1>  
+        <h3 class="fade-in-text">方文山電影同名主題曲</h3>
+        <h2 class="fade-in-text">作詞：方文山<br>作曲：周杰倫<br>編曲：周杰倫</h2>
+        
+        <nav>
+            <ul class="navigation fade-in-text">
+                <li><a href="Home_website.html">回首頁</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="lyrics fade-in-text">
+            竹籬上 停留著 蜻蜓<br>
+            玻璃瓶裡插滿 小小 森林<br>
+            青春 嫩綠的很 鮮明<br>
+            <p></p>
+            百葉窗 折射的 光影<br>
+            像有著心事的 一張 表情<br>
+            而你 低頭拆信 想知道關於我的事情<br>
+            <p></p>
+            青苔入鏡 簷下風鈴 搖晃曾經<br>
+            回憶是 一行行無從<br>
+            剪接的風景 愛始終年輕<br>
+            <p></p>
+            而我聽見 下雨的聲音<br>
+            想起你用唇語 說愛情<br>
+            幸福也可以 很安靜<br>
+            我付出一直 很小心<br>
+            <p></p>
+            終於聽見 下雨的聲音<br>
+            於是我的世界 被吵醒<br>
+            就怕情緒紅 了眼睛<br>
+            不捨的淚在 彼此的 臉上透明<br>
+        </section>
+<br>
+        <section id="tabs" class="fade-in-text">
+            <ul>
+                <li><a href="#tabs-1">歌手的心態</a></li>
+                <li><a href="#tabs-2">作詞者的想法</a></li>
+                <li><a href="#tabs-3">作曲的理念</a></li>
+            </ul>
+            <div id="tabs-1">
+                <p>卸下明星光環，魏如昀不久後，竟接到同劇組另個角色的邀約，甚至還能演唱主題曲「聽見下雨的聲音」，她也因此爆紅。</p>
+            </div>
+            <div id="tabs-2">
+                <p>作詞人吳易緯在創作時，以「雨」這個意象來表達分離與思念的情感，象徵孤單和心碎。</p>
+            </div>
+            <div id="tabs-3">
+                <p>周杰倫的曲風融入抒情元素，鋪陳出情緒的層次變化，使歌曲引發共鳴。</p>
+            </div>
+        </section>
+        <br>
+        <section class="image fade-in-text">
+            <img src="./img/raining.jpg" alt="Raining Image">
+        </section>
+<br>
+        <section class="media fade-in-text">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/F2uX6ByoW7A?si=j8Mlmp4xPOd2MJ7j" 
+            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+
+        <section class="listen-link fade-in-text">
+            <a href="https://www.youtube.com/watch?v=F2uX6ByoW7A" target="_blank">聽歌去</a>  
+        </section>
+    </main>
+
+    <footer class="fade-in-text">
+        <p class="copyright">
+            <small>&copy; 2024 homework，本網站為作業之用，如有侵權敬請告知</small>
+        </p>
+    </footer>
+</body>
+</html>

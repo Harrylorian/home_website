@@ -12,29 +12,43 @@
             // 淡入效果
             $("main").hide().fadeIn(2000);
             
-            // Tabs 效果
-            $("#tabs").tabs();
-            
-            // 文字動畫效果
-            $(".fade-in-text").css({ opacity: 1, transform: "scale(1)" });
+            // 點擊 nav 連結時，目標內容淡入
+            $(".navigation a").click(function(event) {
+                event.preventDefault();
+                var target = $(this).attr("href");
+
+                $("main").fadeOut(1000, function() {
+                    window.location.href = target; // 導向新的頁面
+                });
+            });
+
+            // 當滑過導航連結時，增加縮放效果
+            $(".navigation a").hover(function() {
+                $(this).animate({ fontSize: "1.2em" }, 200);
+            }, function() {
+                $(this).animate({ fontSize: "1em" }, 200);
+            });
+
+            // 當滾動到頁面底部時，頁尾淡入
+            $(window).scroll(function() {
+                if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+                    $("footer").fadeIn(1000);
+                }
+            });
         });
     </script>
 </head>
-
-
 <body>
+
     <video autoplay muted loop id="background-video">
         <source src="music_video.mp4" type="video/mp4">
         您的瀏覽器不支援影片播放。
     </video>
 
-    <!-- 頁首 -->
-
-     <header>
-            <div class="header-background"></div>
-            <h1 class="bounce-in">葉泰豐的歌單</h1>
-     </header>
-        
+    <header>
+        <div class="header-background"></div>
+        <h1 class="bounce-in">葉泰豐的歌單</h1>
+    </header>
 
     <!-- 主內容區塊 -->
     <main>
@@ -59,51 +73,7 @@
     <footer>
         <p>&copy; 2024 NKNU 我的小小網站</p>
     </footer>
-<!-- 頁尾 -->
-<footer>
-    <p>&copy; 2024 NKNU 我的小小網站</p>
-</footer>
 
-<!-- jQuery -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-<!-- 自訂的動畫效果 -->
-<script>
-    $(function() {
-        // 淡入效果
-        $("main").hide().fadeIn(2000);
-
-    
-    // 直接顯示header，無動畫
-    $("header").show(); // 直接顯示，不使用 slideDown
-});
-
-
-
-        // 點擊 nav 連結時，目標內容淡入
-        $(".navigation a").click(function(event) {
-            event.preventDefault();
-            var target = $(this).attr("href");
-
-            $("main").fadeOut(1000, function() {
-                window.location.href = target; // 導向新的頁面
-            });
-        });
-
-        // 當滑過導航連結時，增加縮放效果
-        $(".navigation a").hover(function() {
-            $(this).animate({ fontSize: "1.2em" }, 200);
-        }, function() {
-            $(this).animate({ fontSize: "1em" }, 200);
-        });
-
-        // 當滾動到頁面底部時，頁尾淡入
-        $(window).scroll(function() {
-            if ($(window).scrollTop() + $(window).height() == $(document).height()) {
-                $("footer").fadeIn(1000);
-            }
-        });
-    });
-</script>
+    <script src="script.js"></script>
 </body>
 </html>

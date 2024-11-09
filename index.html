@@ -6,21 +6,7 @@
     <title>我的網站</title>
     <link rel="stylesheet" href="style03.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(function() {
-            // 淡入效果
-            $("main").hide().fadeIn(2000);
-            
-            // Tabs 效果
-            $("#tabs").tabs();
-            
-            // 文字動畫效果
-            $(".fade-in-text").css({ opacity: 1, transform: "scale(1)" });
-        }
-        <!-- jQuery -->
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js">
 
     $(function() {
         // 淡入效果
@@ -38,6 +24,7 @@
                 window.location.href = target; // 導向新的頁面
             });
         });
+        
 
         // 當滑過導航連結時，增加縮放效果
         $(".navigation a").hover(function() {

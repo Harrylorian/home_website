@@ -7,43 +7,24 @@
     <link rel="stylesheet" href="style03.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-    $(function() {
-        // 這裡是 JavaScript 代碼
-    });
-    $(function() {
+    <script>
+        $(function() {
             // 淡入效果
             $("main").hide().fadeIn(2000);
-
-            // 頁面加載時，header 逐漸滑動顯示
-            $("header").hide().slideDown(2000);
-
-            // 點擊 nav 連結時，目標內容淡入
-            $(".navigation a").click(function(event) {
-                event.preventDefault();
-                var target = $(this).attr("href");
-
-
-                });
-            });
-
-            // 當滑過導航連結時，增加縮放效果
-            $(".navigation a").hover(function() {
-                $(this).animate({ fontSize: "1.2em" }, 200);
-            }, function() {
-                $(this).animate({ fontSize: "1em" }, 200);
-            });
-
-            // 當滾動到頁面底部時，頁尾淡入
-            $(window).scroll(function() {
-                if ($(window).scrollTop() + $(window).height() == $(document).height()) {
-                    $("footer").fadeIn(1000);
-                }
-            });   
-</script>
-    
+            
+            // Tabs 效果
+            $("#tabs").tabs();
+            
+            // 文字動畫效果
+            $(".fade-in-text").css({ opacity: 1, transform: "scale(1)" });
+        });
+    </script>
 </head>
 <body>
+    <video autoplay muted loop id="background-video">
+        <source src="music_video.mp4" type="video/mp4">
+        您的瀏覽器不支援影片播放。
+    </video>
 
     <!-- 頁首 -->
     <header class="fade-in-text">
@@ -67,18 +48,53 @@
                 </ul>
             </nav>
         </section>
-
-        <video autoplay muted loop id="background-video">
-            <source src="music_video.mp4" type="video/mp4">
-            您的瀏覽器不支援影片播放。
-        </video>
     </main>
 
     <!-- 頁尾 -->
     <footer>
         <p>&copy; 2024 NKNU 我的小小網站</p>
     </footer>
-    
-    
+<!-- 頁尾 -->
+<footer>
+    <p>&copy; 2024 NKNU 我的小小網站</p>
+</footer>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- 自訂的動畫效果 -->
+<script>
+    $(function() {
+        // 淡入效果
+        $("main").hide().fadeIn(2000);
+
+        // 頁面加載時，header 逐漸滑動顯示
+        $("header").hide().slideDown(2000);
+
+        // 點擊 nav 連結時，目標內容淡入
+        $(".navigation a").click(function(event) {
+            event.preventDefault();
+            var target = $(this).attr("href");
+
+            $("main").fadeOut(1000, function() {
+                window.location.href = target; // 導向新的頁面
+            });
+        });
+
+        // 當滑過導航連結時，增加縮放效果
+        $(".navigation a").hover(function() {
+            $(this).animate({ fontSize: "1.2em" }, 200);
+        }, function() {
+            $(this).animate({ fontSize: "1em" }, 200);
+        });
+
+        // 當滾動到頁面底部時，頁尾淡入
+        $(window).scroll(function() {
+            if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+                $("footer").fadeIn(1000);
+            }
+        });
+    });
+</script>
 </body>
 </html>
